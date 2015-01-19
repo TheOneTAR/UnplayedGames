@@ -1,0 +1,60 @@
+<html lang="en">
+   <head>
+      <title>Unplayed Games</title>
+      <script type="text/javascript" src="xml2json.js"></script>
+      <script type="text/javascript" src="thebrains.js"></script>
+      <link rel="stylesheet" media="screen" href="mainStyles.css">
+      <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+   </head>
+   <body>
+     
+      <div class="main_wrapper">
+        <div id="inquiry">
+          <h2>Unplayed Games</h2>
+          <p>This is a handy <span class="comment">(not really)</span> little tool that tells you how long and how many people it would take, on average, to play all the unplayed games in your BGG collection.</p>
+
+          <p>It assumes that your collection is somewhat up to date, and that you log your plays. It also assumes you're very social and only ever play one game with someone. <span class="comment">Or would that make you unsocial?</span></p>
+
+          <span class="label">Your BGG Username, if you would: </span>
+          <form onsubmit="calculateIt();return false;">
+            <input id="username" type="text" size="25"><br />
+            <button type="button" onclick="calculateIt()">How Screwed Am I?</button>
+          </form>
+        </div>
+        <div id="results" style="visibility: hidden; display:none;">
+          <h2>Congratulations!</h2>
+           <p class="unplayed">You have <span id="gamesUnplayed"></span> unplayed games in your collection.</p>
+
+           <p class="time">It would take you on average <span id="timeNeeded"></span> to play through your unplayed games.</p>
+
+           <p class="friends">You would need on average 
+              <span id="numPlayers"></span> unique friends to play through your unplayed games, 
+              <span id="minPlayers"></span> at the very least.</p>
+
+           <div class="share">
+              <span id="twitterLink"></span>
+           </div>
+
+           <p class="about">This website was created for you by Tiffany Ralph, who apparently has too much time on her hands.</p>
+        </div>
+
+      </div>
+
+      <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+       
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+       
+        return t;
+      }(document, "script", "twitter-wjs"));</script>
+   </body>
+</html>
