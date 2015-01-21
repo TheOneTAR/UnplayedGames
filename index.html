@@ -2,13 +2,13 @@
    <head>
       <title>Unplayed Games</title>
       <script type="text/javascript" src="xml2json.js"></script>
-      <script type="text/javascript" src="thebrains11.js"></script>
-      <link rel="stylesheet" media="screen" href="thebeauty.css">
+      <script type="text/javascript" src="thebrains13.js"></script>
+      <link rel="stylesheet" media="screen" href="thebeauty2.css">
       <link rel="stylesheet" media="(max-width: 800px)" href="thelittlebeauty.css">
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
    </head>
-   <body>
+   <body onload="init()">
      
       <div class="main_wrapper">
         <div id="inquiry">
@@ -39,9 +39,16 @@
             Time to celebrate <span class="comment">and maybe treat yourself to something new ;)</span></p>
            <img src="complete.gif" width="400px"/>
            <p class="about">This website was created for you by <a href="https://twitter.com/TheOneTAR">Tiffany Ralph</a>, who apparently has too much time on her hands.</p>
+           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+              <input class="ribbon" type="image" src="http://bebopdevelopment.com/UnplayedGames/ribbon.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
         </div>
         <div id="results" style="visibility: hidden; display:none;">
-          <h2>Congratulations!</h2>
+          <h2>Congratulations<span id="name"></span>!</h2>
            <p class="unplayed">You have <span id="gamesUnplayed"></span> in your collection.</p>
 
            <p class="time">It would take you on average <span id="timeNeeded"></span> to play through your unplayed games.</p>
@@ -56,6 +63,16 @@
 
            <img src="success.gif" />
            <p class="about">This website was created for you by <a href="https://twitter.com/TheOneTAR">Tiffany Ralph</a>, who apparently has too much time on her hands.</p>
+           
+
+           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+              <input class="ribbon" type="image" src="http://bebopdevelopment.com/UnplayedGames/ribbon.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+
         </div>
 
       </div>
